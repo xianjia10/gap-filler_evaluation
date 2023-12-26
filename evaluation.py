@@ -19,8 +19,8 @@ ref_kmer=read_file(sys.argv[1])
 kmers=read_file(sys.argv[2])
 completeness= len(kmers & ref_kmer) /len(ref_kmer) 
 accuracy =len(kmers & ref_kmer)/len(kmers)
-print("completeness",int(-10*math.log(1-completeness)))
-print("accuracy",int(-10*math.log(1-accuracy)))
+print("completeness %.4f"%completeness)
+print("accuracy %.4f"%accuracy)
 
 
 
